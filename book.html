@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a call — Gathered</title>
+  <meta name="description" content="Book a discovery call with Gathered, or reach out by email. Let's talk about building community, holding space, and healing-centered practice." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Gathered home">
+        <img class="brand__mark" src="assets/logo.svg" alt="" />
+        <span class="brand__name">gathered</span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="offerings.html">Offerings</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li class="nav__cta"><a class="btn btn--primary" href="book.html">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <span class="arc" style="width:300px;height:300px;top:-110px;right:-60px;"></span>
+      <div class="container hero__inner">
+        <p class="eyebrow">Let's connect</p>
+        <h1>Book a discovery call.</h1>
+        <p class="lead hero__lead">Pick a time that works for you and we will talk about your community, what you are reaching for, and how Gathered can help. This first conversation is free and open.</p>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="booking">
+
+          <!-- =====================================================
+               SETUP NOTE — for the site owner only.
+               Delete this dashed box once your calendar is connected.
+               ===================================================== -->
+          <div class="setup-note">
+            <strong>Setup step (owner only):</strong> Connect your Google Calendar appointment schedule here, the same way it works for Bloom Consulting.
+            <br /><br />
+            1. In Google Calendar, open your appointment schedule and choose <strong>Share &rarr; Embed</strong>. Copy the link that looks like <code>https://calendar.google.com/calendar/appointments/schedules/XXXXX?gv=true</code>.
+            <br />
+            2. In <code>book.html</code>, find the <code>&lt;iframe&gt;</code> just below and paste your link into <code>src="..."</code>. Then delete this dashed box and the placeholder button.
+            <br /><br />
+            Until then, the placeholder button below stands in for your live calendar.
+          </div>
+
+          <p class="eyebrow">Schedule time</p>
+          <h2 style="margin-bottom:0.6rem;">Find a time to talk</h2>
+          <p class="text-muted" style="max-width:48ch;margin:0 auto 1.8rem;">Choose a slot below and you will get a calendar invite with all the details.</p>
+
+          <!-- ===== LIVE CALENDAR (paste your booking link into src) =====
+               When your link is in place, remove the placeholder button
+               below and this comment. -->
+          <!--
+          <iframe
+            class="booking__frame"
+            src="PASTE_YOUR_GOOGLE_APPOINTMENT_LINK_HERE?gv=true"
+            title="Book an appointment with Gathered"
+            frameborder="0">
+          </iframe>
+          -->
+
+          <!-- Placeholder button (remove once the live calendar above is active) -->
+          <a class="btn btn--primary" href="REPLACE_WITH_YOUR_BOOKING_LINK" style="font-size:1.05rem;">Choose a time on the calendar</a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EMAIL / CONTACT ===== -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="center mb-lg">
+          <p class="eyebrow">Prefer to write?</p>
+          <h2>Reach out any time</h2>
+        </div>
+        <div class="contact-methods narrow">
+          <article class="card center">
+            <span class="card__tag">Email</span>
+            <h3>Send a note</h3>
+            <p>Tell us a little about your community and what you are hoping for. We read every message and will reply personally.</p>
+            <!-- SETUP: replace with the real Gathered email address -->
+            <a class="btn btn--outline" href="mailto:youremail@example.com" style="margin-top:1rem;">youremail@example.com</a>
+          </article>
+          <article class="card center">
+            <span class="card__tag">What to expect</span>
+            <h3>A warm, welcoming start</h3>
+            <p>Our first conversation is about listening. We will get to know your context and share honestly how we can help.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="center mb-lg">
+          <p class="eyebrow">Good to know</p>
+          <h2>A few common questions</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Who do you work with?</summary>
+            <p>We work with organizations and teams, practitioners and facilitators, and community groups. If you hold space for others in any form, there is likely a way we can support you.</p>
+          </details>
+          <details>
+            <summary>What happens on a discovery call?</summary>
+            <p>We listen. We will ask about your community, what feels alive and what you are reaching for. By the end, you will have a clearer sense of a possible path forward, and the choice of next steps stays fully yours.</p>
+          </details>
+          <details>
+            <summary>Do you work in person or online?</summary>
+            <p>Both. We facilitate gatherings, trainings, and healing spaces in person and online, and we will recommend the format that best serves your people.</p>
+          </details>
+          <details>
+            <summary>How do we get started?</summary>
+            <p>Book a discovery call using the calendar above, or send an email. That first conversation is the doorway in.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html" aria-label="Gathered home">
+            <img class="brand__mark" src="assets/logo.svg" alt="" />
+            <span class="brand__name">gathered</span>
+          </a>
+          <p>Building community, holding space, and growing healing-centered practice.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="offerings.html">Offerings</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="book.html">Book a call</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <!-- SETUP: replace with the real Gathered email address -->
+            <li><a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li><a href="book.html">Schedule time</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Gathered. All rights reserved.</span>
+        <span>Made with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
