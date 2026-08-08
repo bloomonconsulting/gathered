@@ -210,8 +210,8 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
 }
 
 /* Actual logo image in nav / footer */
-.brand__logo { height: 54px; width: auto; display: block; }
-.footer .brand__logo--light { height: 82px; margin-bottom: 0.4rem; }
+.brand__logo { height: 38px; width: auto; display: block; }
+.footer .brand__logo--light { height: 54px; margin-bottom: 0.4rem; }
 
 /* Logo lockup — recreates the GATHERED / in community mark */
 .logo-lockup { display: inline-flex; flex-direction: column; line-height: 0.92; }
@@ -539,7 +539,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
 
 @media (max-width: 760px) {
   body { font-size: 17px; }
-  .brand__logo { height: 44px; }
+  .brand__logo { height: 32px; }
   .nav__toggle { display: block; }
   .nav__links {
     position: absolute;
