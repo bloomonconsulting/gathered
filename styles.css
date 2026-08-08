@@ -209,6 +209,10 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
   letter-spacing: -0.02em;
 }
 
+/* Actual logo image in nav / footer */
+.brand__logo { height: 54px; width: auto; display: block; }
+.footer .brand__logo--light { height: 82px; margin-bottom: 0.4rem; }
+
 /* Logo lockup — recreates the GATHERED / in community mark */
 .logo-lockup { display: inline-flex; flex-direction: column; line-height: 0.92; }
 .logo-lockup__name {
@@ -328,12 +332,14 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
 .card p { color: var(--muted); font-size: 1rem; }
 .card__tag {
   display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--clay);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 /* Rotate accent pops across cards in a grid */
 .grid--3 .card:nth-child(3n+1) .card__tag { color: var(--sage); }
@@ -533,6 +539,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
 
 @media (max-width: 760px) {
   body { font-size: 17px; }
+  .brand__logo { height: 44px; }
   .nav__toggle { display: block; }
   .nav__links {
     position: absolute;
