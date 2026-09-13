@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a call | Gathered</title>
-  <meta name="description" content="Book a discovery call with Gathered, or reach out by email. Let's talk about building community, holding space, and healing-centered practice." />
+  <title>Book a call | Gathered in Community, [City, State]</title>
+  <meta name="description" content="Book a call with Gathered in Community, or send a note by email." />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&family=Sacramento&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sacramento&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
   <header class="nav">
     <div class="container nav__inner">
-      <a class="brand" href="index.html" aria-label="Gathered home">
-        <img class="brand__logo" src="assets/logo-h-dark.png" alt="Gathered in community" />
+      <a class="brand" href="index.html" aria-label="Gathered in Community, home">
+        <img class="brand__logo" src="assets/wordmark-dark.png" alt="Gathered in Community" />
       </a>
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -26,7 +25,7 @@
         <ul class="nav__links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="offerings.html">Offerings</a></li>
+          <li><a href="offerings.html">How We Gather</a></li>
           <li><a href="training.html">Training</a></li>
           <li class="nav__cta"><a class="btn btn--primary" href="book.html">Book a call</a></li>
         </ul>
@@ -35,85 +34,87 @@
   </header>
 
   <main>
-    <!-- ===== HERO ===== -->
     <section class="hero">
-      <span class="hero__sprig" style="top:14%;right:7%;"></span>
-      <span class="arc" style="width:300px;height:300px;top:-110px;right:-60px;"></span>
-      <div class="container hero__inner">
+      <span class="shape" style="left:5.6%;top:40.2%;width:57px;transform:rotate(161deg);opacity:0.48" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M24,8 C60,-4 96,24 96,60 C96,80 82,94 64,98 C86,80 88,48 68,28 C54,14 38,10 24,8 Z" fill="#FE9F5F"/></svg></span>
+      <span class="shape" style="left:6.3%;top:25.5%;width:119px;transform:rotate(291deg);opacity:0.85" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M24,8 C60,-4 96,24 96,60 C96,80 82,94 64,98 C86,80 88,48 68,28 C54,14 38,10 24,8 Z" fill="var(--yellow-soft)"/></svg></span>
+      <span class="shape" style="right:11.4%;top:67.9%;width:70px;transform:rotate(264deg);opacity:0.45" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M6,50 C26,18 66,6 96,14 C70,26 44,44 30,72 C22,88 8,72 6,50 Z" fill="#D66F10"/></svg></span>
+      <div class="container hero__grid">
+        <div class="hero__content">
         <p class="eyebrow">Contact</p>
-        <h1>Book a discovery call.</h1>
-        <p class="lead hero__lead">Pick a time that works for you. This first call is free, and we will talk about your goals and how Gathered can help.</p>
+        <h1>Book a call</h1>
+        <p class="lead hero__lead">Pick a time that works for you. We will talk about what you are looking for and where Gathered fits.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ===== BOOKING ===== -->
     <section class="section">
+      <span class="shape" style="left:2.1%;top:14.8%;width:155px;transform:rotate(224deg);opacity:0.92" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M24,8 C60,-4 96,24 96,60 C96,80 82,94 64,98 C86,80 88,48 68,28 C54,14 38,10 24,8 Z" fill="var(--teal-soft)"/></svg></span>
+      <span class="shape" style="left:2.9%;top:71.9%;width:152px;transform:rotate(194deg);opacity:0.98" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50,3 C74,28 90,55 73,78 C60,95 33,96 21,79 C6,58 24,27 50,3 Z" fill="var(--orange-soft)"/></svg></span>
       <div class="container narrow">
         <div class="booking">
 
-          <!-- =====================================================
-               SETUP NOTE - for the site owner only.
-               Delete this dashed box once your calendar is connected.
-               ===================================================== -->
+          <!-- SETUP NOTE - for the site owner only. Delete once the calendar is connected. -->
           <div class="setup-note">
-            <strong>Setup step (owner only):</strong> Connect your Google Calendar appointment schedule here, the same way it works for Bloom Consulting.
+            <strong>Setup step (owner only):</strong> Connect the Google Calendar appointment schedule here.
             <br /><br />
-            1. In Google Calendar, open your appointment schedule and choose <strong>Share &rarr; Embed</strong>. Copy the link that looks like <code>https://calendar.google.com/calendar/appointments/schedules/XXXXX?gv=true</code>.
+            1. In Google Calendar, open the appointment schedule and choose <strong>Share</strong>, then <strong>Embed</strong>. Copy the link that looks like <code>https://calendar.google.com/calendar/appointments/schedules/XXXXX?gv=true</code>.
             <br />
-            2. In <code>book.html</code>, find the <code>&lt;iframe&gt;</code> just below and paste your link into <code>src="..."</code>. Then delete this dashed box and the placeholder button.
-            <br /><br />
-            Until then, the placeholder button below stands in for your live calendar.
+            2. In <code>book.html</code>, paste that link into the <code>&lt;iframe&gt;</code> below, then delete this dashed box and the placeholder button.
           </div>
 
-          <p class="eyebrow">Schedule time</p>
-          <h2 style="margin-bottom:0.6rem;">Book a time</h2>
-          <p class="text-muted" style="max-width:48ch;margin:0 auto 1.8rem;">Choose a slot below and you will get a calendar invite with all the details.</p>
+          <h2 style="margin-bottom:0.6rem;">Find a time</h2>
+          <p class="text-muted" style="max-width:48ch;margin:0 auto 1.8rem;">Choose a slot and you will get a calendar invite with the details.</p>
 
-          <!-- ===== LIVE CALENDAR (paste your booking link into src) =====
-               When your link is in place, remove the placeholder button
-               below and this comment. -->
-          <!--
-          <iframe
-            class="booking__frame"
-            src="PASTE_YOUR_GOOGLE_APPOINTMENT_LINK_HERE?gv=true"
-            title="Book an appointment with Gathered"
-            frameborder="0">
-          </iframe>
+          <!-- LIVE CALENDAR: paste the booking link into src, then remove the placeholder button below.
+          <iframe class="booking__frame" src="PASTE_BOOKING_LINK_HERE" title="Book an appointment with Gathered in Community" frameborder="0"></iframe>
           -->
 
-          <!-- Placeholder button (remove once the live calendar above is active) -->
           <a class="btn btn--primary" href="REPLACE_WITH_YOUR_BOOKING_LINK" style="font-size:1.05rem;">Choose a time on the calendar</a>
 
         </div>
       </div>
     </section>
 
-    <!-- ===== EMAIL / CONTACT ===== -->
+
+    <section class="section">
+      <div class="container narrow">
+        <dl class="facts">
+          <div><dt>Accepting clients</dt><dd><span class="ph">[Yes, or currently a waitlist]</span></dd></div>
+          <div><dt>Response time</dt><dd><span class="ph">[e.g. within two business days]</span></dd></div>
+          <div><dt>Based in</dt><dd><span class="ph">[City, State]</span>, with online sessions available</dd></div>
+        </dl>
+      </div>
+    </section>
+
     <section class="section section--tint">
+      <span class="shape" style="right:11.6%;top:80.6%;width:114px;transform:rotate(117deg);opacity:0.87" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M6,50 C26,18 66,6 96,14 C70,26 44,44 30,72 C22,88 8,72 6,50 Z" fill="var(--teal-soft)"/></svg></span>
+      <span class="shape" style="right:1.2%;top:73.5%;width:135px;transform:rotate(359deg);opacity:0.94" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M96,6 C62,10 22,30 10,62 C2,84 16,96 38,92 C70,86 94,48 96,6 Z" fill="var(--teal-soft)"/></svg></span>
       <div class="container">
         <div class="center mb-lg">
           <p class="eyebrow">Email</p>
-          <h2>Email us</h2>
+          <h2>Send a note</h2>
         </div>
-        <div class="contact-methods narrow">
+        <div class="grid grid--2 narrow">
           <article class="card center">
-            <span class="card__tag">By email</span>
-            <h3>Send a note</h3>
-            <p>Tell us about your goals. We read every message and reply personally.</p>
+            <span class="card__tag">Write to us</span>
+            <h3>Tell us what you are looking for</h3>
+            <p>We read every message and reply personally.</p>
             <!-- SETUP: replace with the real Gathered email address -->
             <a class="btn btn--outline" href="mailto:youremail@example.com" style="margin-top:1rem;">youremail@example.com</a>
           </article>
           <article class="card center">
-            <span class="card__tag">Response</span>
-            <h3>What to expect</h3>
-            <p>Our first conversation is about your context and how we can help.</p>
+            <span class="card__tag">What happens next</span>
+            <h3>A first conversation</h3>
+            <p>We talk through what you need and which part of Gathered fits. The choice of next steps stays yours.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+
     <section class="section">
+      <span class="shape" style="left:3.1%;top:14.5%;width:70px;transform:rotate(238deg);opacity:0.43" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M8,92 C8,44 44,8 92,8 L92,34 C58,34 34,58 34,92 Z" fill="#FE9F5F"/></svg></span>
+      <span class="shape" style="right:9.9%;top:85.6%;width:119px;transform:rotate(84deg);opacity:0.89" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M96,6 C62,10 22,30 10,62 C2,84 16,96 38,92 C70,86 94,48 96,6 Z" fill="var(--yellow-soft)"/></svg></span>
       <div class="container">
         <div class="center mb-lg">
           <p class="eyebrow">FAQ</p>
@@ -121,41 +122,40 @@
         </div>
         <div class="faq">
           <details open>
-            <summary>Who do you work with?</summary>
-            <p>We work with organizations and teams, practitioners and facilitators, and community groups.</p>
+            <summary>What does Gathered offer?</summary>
+            <p>Community connections, discovery workshops, trainings for teams, and relational therapy.</p>
           </details>
           <details>
-            <summary>What happens on a discovery call?</summary>
-            <p>We ask about your goals and needs, and share how we can help. The choice of next steps stays yours.</p>
+            <summary>Do you offer therapy?</summary>
+            <p>Yes. Individual, couples, and multi-partner relationship counseling.</p>
           </details>
           <details>
-            <summary>Do you work in person or online?</summary>
-            <p>Both. We facilitate gatherings, trainings, and healing spaces in person and online, and we will recommend the format that best serves your people.</p>
+            <summary>Do you work with organizations?</summary>
+            <p>Yes. Trainings and workshops for teams, organizations, and community groups.</p>
           </details>
           <details>
-            <summary>How do we get started?</summary>
-            <p>Book a discovery call using the calendar above, or send an email. That first conversation is the doorway in.</p>
+            <summary>What is the foundational workshop?</summary>
+            <p>Beyond Trauma-Informed Practice: Building Trauma-Responsive Communities. It explores what it looks like to create environments where people feel safer, more connected, and better supported.</p>
           </details>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a class="brand" href="index.html" aria-label="Gathered home">
-            <img class="brand__logo brand__logo--light" src="assets/logo-h-light.png" alt="Gathered in community" />
+          <a class="brand" href="index.html" aria-label="Gathered in Community, home">
+            <img class="brand__logo" src="assets/wordmark-light.png" alt="Gathered in Community" />
           </a>
-          <p>Building community, holding space, and growing healing-centered practice.</p>
+          <p>A container for curiosity, connection, and growth.</p>
         </div>
         <div>
           <h4>Explore</h4>
           <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="offerings.html">Offerings</a></li>
+            <li><a href="offerings.html">How we gather</a></li>
             <li><a href="training.html">Training</a></li>
             <li><a href="book.html">Book a call</a></li>
           </ul>
@@ -166,12 +166,12 @@
             <!-- SETUP: replace with the real Gathered email address -->
             <li><a href="mailto:youremail@example.com">youremail@example.com</a></li>
             <li><a href="book.html">Schedule time</a></li>
+            <li><span class="ph">[City, State]</span></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2026 Gathered. All rights reserved.</span>
-        <span>Made with care.</span>
+        <span>&copy; 2026 Gathered in Community. All rights reserved.</span>
       </div>
     </div>
   </footer>
