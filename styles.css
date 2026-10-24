@@ -214,7 +214,7 @@ h3 { font-size: clamp(1.15rem,2vw,1.4rem); }
 .footer { background: var(--teal); color: #F1E6D8; padding-block: clamp(3rem,6vw,4.5rem) 2rem; }
 .footer a { color: #F2D9B8; text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
-.footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2.5rem; padding-bottom: 2.4rem; border-bottom: 1px solid rgba(255,255,255,.16); }
+.footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 2.4rem; border-bottom: 1px solid rgba(255,255,255,.16); }
 .footer__brand p { color: #E0D2C0; max-width: 34ch; margin-top: 1rem; font-size: .96rem; }
 .footer h4 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .13em; font-size: .72rem; color: var(--yellow); margin: 0 0 1rem; }
 .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; font-size: .96rem; }
@@ -335,3 +335,16 @@ h3 { font-size: clamp(1.15rem,2vw,1.4rem); }
 .section--yellow-solid .btn--outline:hover { background: var(--ink); color: #fff; }
 .section--orange-solid .btn--outline:hover { background: #fff; color: var(--orange-deep); }
 .section--yellow-solid .ph, .section--orange-solid .ph { background: #fff; color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
+
+/* ---------- Founder portrait ---------- */
+.portrait { display: block; width: 100%; max-width: 440px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 18px; margin-inline: auto; }
+
+/* ---------- Relational therapy detail ---------- */
+.therapy-list { display: grid; gap: 1.4rem; margin-top: 1.6rem; }
+.therapy-list h3 { margin-bottom: .35rem; }
+.therapy-list ul { margin: .5rem 0 0; padding-left: 1.2rem; }
+.therapy-list li { margin-bottom: .25rem; }
+
+/* ---------- Keep long email addresses inside their cards ---------- */
+.grid > * { min-width: 0; }
+.card .btn { max-width: 100%; white-space: normal; }
