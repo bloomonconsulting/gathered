@@ -114,7 +114,7 @@ h3 { font-size: clamp(1.15rem,2vw,1.4rem); }
 
 /* Nav */
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .8rem; }
+.nav__inner { display: flex; align-items: center; justify-content: flex-end; gap: 1rem; padding-block: .8rem; }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
 .brand__logo { height: 40px; width: auto; }
 .footer .brand__logo { height: 54px; }
@@ -348,3 +348,15 @@ h3 { font-size: clamp(1.15rem,2vw,1.4rem); }
 /* ---------- Keep long email addresses inside their cards ---------- */
 .grid > * { min-width: 0; }
 .card .btn { max-width: 100%; white-space: normal; }
+
+/* ---------- Home headline and mission ---------- */
+.display em { font-style: italic; font-weight: inherit; }
+.display .underline { text-decoration: underline; text-decoration-thickness: .07em; text-underline-offset: .12em; }
+.mission { font-size: clamp(1.3rem, 2.4vw, 1.75rem); line-height: 1.45; font-weight: 500; margin: 0; }
+
+/* ---------- About bio ---------- */
+.signoff { font-weight: 600; color: var(--ink); }
+.hero__content .display { font-size: clamp(2.6rem, 5.2vw, 4.4rem); line-height: 1.05; }
+@media (min-width: 901px) { .hero__content:has(.display) { max-width: 72ch; } }
+.split:has(.portrait) { align-items: start; }
+.split:has(.portrait) .split__media { position: sticky; top: 6rem; }
