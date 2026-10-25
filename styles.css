@@ -7,15 +7,15 @@
 :root {
   /* Core palette */
   --ink: #25313F;        /* navy, headings + body */
-  --teal: #185452;
-  --teal-dark: #10403E;
+  --teal: #1A7F79;
+  --teal-dark: #146560;
   --yellow: #F7C001;
   --orange: #D66F10;        /* fills and shapes */
   --orange-ink: #A85510;    /* text: passes AA at small sizes */
   --orange-deep: #A85510;   /* bold section background, white text passes */
 
   /* Tints */
-  --teal-soft: #E4EEED;
+  --teal-soft: #E2F1EF;
   --yellow-soft: #FEF4D2;
   --peach-soft: #FFEDE0;
   --orange-soft: #FBE7D4;
