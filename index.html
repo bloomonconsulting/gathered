@@ -60,9 +60,9 @@
         <div class="signup">
           <h2>Connect with us</h2>
           <p class="text-muted" style="margin-top:.6rem;">Get an email when a new group, workshop, or event opens up.</p>
-          <!-- SETUP: paste the Google Apps Script web app URL into data-endpoint (see signup-to-sheet.gs) -->
+          <!-- Sends signups to the Google Sheet through the Apps Script web app (see signup-to-sheet.gs) -->
           <label class="signup__label" for="signup-email">Email</label>
-          <form class="signup__form" id="signup-form" data-endpoint="PASTE_APPS_SCRIPT_WEB_APP_URL" novalidate>
+          <form class="signup__form" id="signup-form" data-endpoint="https://script.google.com/macros/s/AKfycbx4OmwwGQGiG8Gp2SMv_n3KQyb5qOxJfQc5vRGE7gTCJFfrTUj-lZuYNwSduq81YqG2/exec" novalidate>
             <input type="email" id="signup-email" name="email" autocomplete="email" placeholder="you@example.com" required />
             <button class="btn btn--primary" type="submit">Sign up</button>
           </form>
