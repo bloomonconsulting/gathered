@@ -405,7 +405,7 @@ h3 { font-size: clamp(1.15rem,2vw,1.4rem); }
   --yellow: var(--teal-fill); --orange: var(--mustard); --orange-ink: var(--mustard-text); --orange-deep: var(--mustard);
   --line: #EDE7EF; --muted: #4D3F52;
   --teal-soft: #FBF3DC; --yellow-soft: #E6F4F3; --peach-soft: #FBF3DC; --orange-soft: #FBF3DC;
-  --box-width: 760px;
+  --box-width: 960px;
 }
 body { color: var(--ink); }
 h1, h2 { font-weight: 800; letter-spacing: -.02em; color: var(--ink); }
@@ -501,3 +501,12 @@ a { color: var(--mustard-text); }
 .signup__form--stacked .signup__label { margin: 0 0 .45rem; }
 .signup__form--stacked .btn { justify-self: start; }
 @media (max-width: 600px) { .signup__form--stacked { grid-template-columns: 1fr; } }
+/* Home page: the hero lines up with the boxes below, all one width */
+.hero--home .hero__grid { display: block; }
+.hero--home .hero__content { max-width: none; }
+/* keep long lines comfortable to read inside the wider boxes */
+.mission { max-width: none; margin-inline: 0; }
+.fill-teal .container.center, .section--yellow-solid .container.center { text-align: left; }
+.signup > p { max-width: 60ch; }
+.hero--home .hero__lead { max-width: 62ch; }
+.section--orange-solid .offering p, .section--orange-solid .offering ul { max-width: 70ch; }

@@ -2,7 +2,7 @@
  * Gathered in Community: email signup to Google Sheet
  *
  * Setup (about 5 minutes):
- * 1. Create a Google Sheet (for example "Gathered email list"). In row 1 type: Date | Email | Page | Name
+ * 1. Create a Google Sheet (for example "Gathered email list"). In row 1 type: Date | Name | Email | Page
  * 2. In the sheet, open Extensions > Apps Script, delete what is there, and paste this whole file.
  * 3. Click Deploy > New deployment > Select type: Web app.
  *      Execute as: Me
@@ -28,10 +28,10 @@ function doPost(e) {
     // skip duplicates
     var last = sheet.getLastRow();
     if (last > 1) {
-      var existing = sheet.getRange(2, 2, last - 1, 1).getValues().flat().map(String);
+      var existing = sheet.getRange(2, 3, last - 1, 1).getValues().flat().map(String);
       if (existing.indexOf(email) !== -1) return ContentService.createTextOutput('exists');
     }
-    sheet.appendRow([new Date(), email, page, name]);
+    sheet.appendRow([new Date(), name, email, page]);
   } finally {
     lock.releaseLock();
   }
