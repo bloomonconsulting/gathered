@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gathered in Community | Relational therapy, groups, and community</title>
-  <meta name="description" content="Gathered in Community is a community-centered care collective, offering individual, couples, multi-partner, and group therapy, peer-led life groups, professional training, and community-building workshops." />
+  <meta name="description" content="Gathered in Community is a care collective, offering individual, couples, multi-partner, and group therapy, peer-led life groups, professional training, and community-building workshops." />
   <link rel="canonical" href="https://www.gatheredincommunity.com/" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="nav">
     <div class="container nav__inner">
@@ -30,13 +31,13 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
         <h1 class="display">Making what <em>feels</em> impossible, possible. <span class="underline">Together.</span></h1>
-        <p class="lead hero__lead"><strong>Gathered in Community</strong> is a community-centered care collective. We offer individual, couples, and multi-partner therapy, group therapy, peer-led life groups, professional training, community-building workshops and special events.</p>
+        <p class="lead hero__lead"><strong>Gathered in Community</strong> is a care collective. We offer individual, couples, and multi-partner therapy, group therapy, peer-led life groups, professional training, community-building workshops and special events.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="book.html">Schedule a free consultation call</a>
           <a class="btn btn--outline" href="offerings.html">How we gather</a>
@@ -46,7 +47,7 @@
     </section>
 
     <!-- WHY -->
-    <section class="section section--yellow-solid">
+    <section class="section section--yellow-solid fill-teal">
       <div class="container narrow center">
 
         <p class="mission">We&rsquo;re on a mission to create spaces, relationships, and systems that nurture connection, make resources more accessible, and ensure we have support to lean on through every season of life.</p>
@@ -55,16 +56,17 @@
 
     <!-- STAY CONNECTED -->
     <section class="section">
-      <div class="container narrow">
+      <div class="container narrow narrow--box">
         <div class="signup">
-          <h2>Stay connected with us</h2>
+          <h2>Connect with us</h2>
           <p class="text-muted" style="margin-top:.6rem;">Get an email when a new group, workshop, or event opens up.</p>
-          <!-- SETUP: point this form at your email provider (Mailchimp, Flodesk, ConvertKit).
-               Replace the action URL with the one your provider gives you. -->
-          <form class="signup__form" action="REPLACE_WITH_YOUR_EMAIL_SIGNUP_URL" method="post">
-            <input type="email" name="email" aria-label="Your email address" placeholder="Your email address" required />
+          <!-- SETUP: paste the Google Apps Script web app URL into data-endpoint (see signup-to-sheet.gs) -->
+          <label class="signup__label" for="signup-email">Email</label>
+          <form class="signup__form" id="signup-form" data-endpoint="PASTE_APPS_SCRIPT_WEB_APP_URL" novalidate>
+            <input type="email" id="signup-email" name="email" autocomplete="email" placeholder="you@example.com" required />
             <button class="btn btn--primary" type="submit">Sign up</button>
           </form>
+          <p class="signup__status" id="signup-status" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>
@@ -75,12 +77,12 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a class="brand" href="index.html" aria-label="Gathered in Community, home">
-            <img class="brand__logo" src="assets/wordmark-dark.png" alt="Gathered in Community" />
+            <img class="brand__logo" src="assets/wordmark-light.png" alt="Gathered in Community" />
           </a>
           <p>A container for curiosity, connection, and growth.</p>
         </div>
         <div>
-          <h4>Explore</h4>
+          <h2 class="footer__heading">Explore</h2>
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="offerings.html">How we gather</a></li>
@@ -88,14 +90,14 @@
           </ul>
         </div>
         <div>
-          <h4>Connect</h4>
+          <h2 class="footer__heading">Connect</h2>
           <ul>
             <li><a href="mailto:gatheredincommunity@gmail.com">gatheredincommunity@gmail.com</a></li>
             <li>Licensed in Michigan and Florida</li>
           </ul>
         </div>
         <div>
-          <h4>Follow</h4>
+          <h2 class="footer__heading">Follow</h2>
           <ul>
             <li><a href="https://www.instagram.com/gathered_in_community/" target="_blank" rel="noopener">Instagram</a></li>
             <li><a href="https://www.tiktok.com/@gatheredincommunity" target="_blank" rel="noopener">TikTok</a></li>
