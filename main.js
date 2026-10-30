@@ -20,11 +20,20 @@
   var form = document.getElementById("signup-form");
   if (!form) return;
   var input = document.getElementById("signup-email");
+  var nameInput = document.getElementById("signup-name");
   var status = document.getElementById("signup-status");
   var button = form.querySelector("button");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var email = input.value.trim();
+    var name = nameInput ? nameInput.value.trim() : "";
+    if (nameInput && !name) {
+      status.textContent = "Please enter your name.";
+      nameInput.setAttribute("aria-invalid", "true");
+      nameInput.focus();
+      return;
+    }
+    if (nameInput) nameInput.removeAttribute("aria-invalid");
     if (!input.checkValidity() || !email) {
       status.textContent = "Please enter a valid email address.";
       input.setAttribute("aria-invalid", "true");
@@ -39,7 +48,7 @@
     }
     button.disabled = true;
     status.textContent = "Signing you up...";
-    var body = new URLSearchParams({ email: email, page: location.pathname });
+    var body = new URLSearchParams({ name: name, email: email, page: location.pathname });
     fetch(endpoint, { method: "POST", mode: "no-cors", body: body })
       .then(function () {
         status.textContent = "Thank you! You're on the list.";

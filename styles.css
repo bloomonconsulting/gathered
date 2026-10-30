@@ -496,3 +496,8 @@ a { color: var(--mustard-text); }
 }
 .narrow--box { max-width: calc(var(--box-width) + 2 * clamp(1.25rem, 5vw, 4rem)); }
 .booking { width: 100%; }
+/* Signup with name and email: two fields side by side, button below */
+.signup__form--stacked { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.4rem; align-items: end; }
+.signup__form--stacked .signup__label { margin: 0 0 .45rem; }
+.signup__form--stacked .btn { justify-self: start; }
+@media (max-width: 600px) { .signup__form--stacked { grid-template-columns: 1fr; } }
