@@ -510,3 +510,84 @@ a { color: var(--mustard-text); }
 .signup > p { max-width: 60ch; }
 .hero--home .hero__lead { max-width: 62ch; }
 .section--orange-solid .offering p, .section--orange-solid .offering ul { max-width: 70ch; }
+/* Home mission: no box, set like the hero headline */
+.fill-teal > .container { background: transparent; border: 0; border-radius: 0; padding-block: clamp(.5rem,2vw,1rem); }
+.fill-teal .mission { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem,3.3vw,2.6rem); line-height: 1.12; letter-spacing: -.022em; color: var(--ink); }
+.fill-teal .mission em { color: var(--teal-text); font-style: italic; }
+@media (max-width: 900px) { .fill-teal > .container { margin-inline: auto; padding-inline: clamp(1.25rem,5vw,4rem); } }
+.fill-teal > .container { padding-inline: 0; }
+@media (max-width: 900px) { .fill-teal > .container { margin-inline: 1.25rem; } }
+/* Mission: plum headline text inside a teal outline */
+.fill-teal > .container { border: 2px solid var(--teal-fill); border-radius: var(--radius); padding: clamp(1.8rem,5vw,3.4rem); }
+@media (max-width: 900px) { .fill-teal > .container { margin-inline: 1.25rem; } }
+/* Mission: dark plum box with a teal outline, white headline text */
+.fill-teal > .container { background: var(--ink); border: 3px solid var(--teal-fill); }
+.fill-teal .mission { color: #FFFFFF; }
+/* Mission: plum box framed by a thin moving dashed line in mustard, teal and plum */
+.fill-teal > .container { position: relative; border: 0; }
+.dash-frame { position: absolute; inset: -10px; width: calc(100% + 20px); height: calc(100% + 20px); overflow: visible; pointer-events: none; }
+.dash { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 18 42; animation-duration: 3s; animation-timing-function: linear; animation-iteration-count: infinite; }
+.dash--1 { stroke: var(--mustard); stroke-dashoffset: 0; animation-name: dash-1; }
+.dash--2 { stroke: var(--teal-fill); stroke-dashoffset: -20; animation-name: dash-2; }
+.dash--3 { stroke: var(--ink); stroke-dashoffset: -40; animation-name: dash-3; }
+@keyframes dash-1 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -60; } }
+@keyframes dash-2 { from { stroke-dashoffset: -20; } to { stroke-dashoffset: -80; } }
+@keyframes dash-3 { from { stroke-dashoffset: -40; } to { stroke-dashoffset: -100; } }
+@media (prefers-reduced-motion: reduce) { .dash { animation: none; } }
+/* Mission: no fill, just the moving dashed outline */
+.fill-teal > .container { background: transparent; }
+.fill-teal .mission { color: var(--ink); }
+.dash-frame { inset: 0; width: 100%; height: 100%; }
+/* separate dashes with clear gaps, so the outline reads as broken lines, not a solid frame */
+.dash { stroke-dasharray: 18 72; animation-duration: 4s; }
+.dash--1 { stroke-dashoffset: 0; animation-name: dashgap-1; }
+.dash--2 { stroke-dashoffset: -30; animation-name: dashgap-2; }
+.dash--3 { stroke-dashoffset: -60; animation-name: dashgap-3; }
+@keyframes dashgap-1 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -90; } }
+@keyframes dashgap-2 { from { stroke-dashoffset: -30; } to { stroke-dashoffset: -120; } }
+@keyframes dashgap-3 { from { stroke-dashoffset: -60; } to { stroke-dashoffset: -150; } }
+/* three long lines, one per color, spaced apart and slowly travelling around the box */
+.dash { stroke-width: 3; stroke-dasharray: 72 228; animation-duration: 28s; animation-timing-function: linear; }
+.dash--1 { stroke-dashoffset: 0; animation-name: longline-1; }
+.dash--2 { stroke-dashoffset: -100; animation-name: longline-2; }
+.dash--3 { stroke-dashoffset: -200; animation-name: longline-3; }
+@keyframes longline-1 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -300; } }
+@keyframes longline-2 { from { stroke-dashoffset: -100; } to { stroke-dashoffset: -400; } }
+@keyframes longline-3 { from { stroke-dashoffset: -200; } to { stroke-dashoffset: -500; } }
+/* many long lines around the box (mustard, teal, plum repeating), spaced so they never touch, all drifting slowly */
+.dash { stroke-width: 3; stroke-dasharray: 22 78; animation-duration: 60s; animation-timing-function: linear; }
+.dash--1 { stroke-dashoffset: 0; animation-name: many-1; }
+.dash--2 { stroke-dashoffset: -33.33; animation-name: many-2; }
+.dash--3 { stroke-dashoffset: -66.67; animation-name: many-3; }
+@keyframes many-1 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -300; } }
+@keyframes many-2 { from { stroke-dashoffset: -33.33; } to { stroke-dashoffset: -333.33; } }
+@keyframes many-3 { from { stroke-dashoffset: -66.67; } to { stroke-dashoffset: -366.67; } }
+
+/* each line paces slowly back and forth in its own spot, on its own timing */
+.dash { stroke-width: 3; stroke-dasharray: 22 278; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; }
+.dash-l0 { stroke: var(--mustard); stroke-dashoffset: -0.00; animation-name: pace-0; animation-duration: 11s; animation-delay: 0s; }
+@keyframes pace-0 { from { stroke-dashoffset: 4.00; } to { stroke-dashoffset: -4.00; } }
+.dash-l1 { stroke: var(--teal-fill); stroke-dashoffset: -33.33; animation-name: pace-1; animation-duration: 14s; animation-delay: -4s; }
+@keyframes pace-1 { from { stroke-dashoffset: -29.83; } to { stroke-dashoffset: -36.83; } }
+.dash-l2 { stroke: var(--ink); stroke-dashoffset: -66.67; animation-name: pace-2; animation-duration: 9.5s; animation-delay: -7s; }
+@keyframes pace-2 { from { stroke-dashoffset: -62.67; } to { stroke-dashoffset: -70.67; } }
+.dash-l3 { stroke: var(--mustard); stroke-dashoffset: -100.00; animation-name: pace-3; animation-duration: 13s; animation-delay: -2s; }
+@keyframes pace-3 { from { stroke-dashoffset: -97.00; } to { stroke-dashoffset: -103.00; } }
+.dash-l4 { stroke: var(--teal-fill); stroke-dashoffset: -133.33; animation-name: pace-4; animation-duration: 10.5s; animation-delay: -9s; }
+@keyframes pace-4 { from { stroke-dashoffset: -129.33; } to { stroke-dashoffset: -137.33; } }
+.dash-l5 { stroke: var(--ink); stroke-dashoffset: -166.67; animation-name: pace-5; animation-duration: 15s; animation-delay: -5s; }
+@keyframes pace-5 { from { stroke-dashoffset: -163.17; } to { stroke-dashoffset: -170.17; } }
+.dash-l6 { stroke: var(--mustard); stroke-dashoffset: -200.00; animation-name: pace-6; animation-duration: 12s; animation-delay: -1s; }
+@keyframes pace-6 { from { stroke-dashoffset: -197.00; } to { stroke-dashoffset: -203.00; } }
+.dash-l7 { stroke: var(--teal-fill); stroke-dashoffset: -233.33; animation-name: pace-7; animation-duration: 9s; animation-delay: -6s; }
+@keyframes pace-7 { from { stroke-dashoffset: -229.33; } to { stroke-dashoffset: -237.33; } }
+.dash-l8 { stroke: var(--ink); stroke-dashoffset: -266.67; animation-name: pace-8; animation-duration: 13.5s; animation-delay: -3s; }
+@keyframes pace-8 { from { stroke-dashoffset: -263.17; } to { stroke-dashoffset: -270.17; } }
+@media (prefers-reduced-motion: reduce) { .dash { animation: none; } }
+/* Mission: light words with the key words in bold */
+.fill-teal .mission { font-weight: 400; letter-spacing: -.015em; }
+.fill-teal .mission strong { font-weight: 800; letter-spacing: -.022em; }
+/* Mission: no frame, just a short mustard bar on the left */
+.dash-frame { display: none; }
+.fill-teal > .container { border: 0; border-radius: 0; padding: 0 0 0 clamp(1.4rem,3vw,2rem); position: relative; }
+.fill-teal > .container::before { content: ""; position: absolute; left: 0; top: .35em; width: 6px; height: 3.2em; border-radius: 3px; background: var(--mustard); }
